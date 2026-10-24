@@ -144,10 +144,3 @@ O laboratório demonstrou de forma prática que:
 ## 7. Vídeo demonstrativo
 
 Link (YouTube "Não listado"): https://youtu.be/nEup6g0qPiU
-
-## 8. Scripts e wordlists
-
-- `app/app_v1_vulneravel.py` — versão sem proteção
-- `app/app_v2_rate_limit.py` — versão com rate limiting
-- `app/app_v3_2fa.py` — versão com rate limiting + 2FA
-- `wordlist.txt`, `wordlist2.txt` — wordlists de teste utilizadas nos ataques
