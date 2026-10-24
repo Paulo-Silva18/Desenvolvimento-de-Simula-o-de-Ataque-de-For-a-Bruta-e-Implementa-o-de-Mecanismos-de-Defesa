@@ -143,7 +143,7 @@ O laboratório demonstrou de forma prática que:
 
 ## 7. Vídeo demonstrativo
 
-Link (YouTube "Não listado"): `[inserir link aqui]`
+Link (YouTube "Não listado"): https://youtu.be/nEup6g0qPiU
 
 ## 8. Scripts e wordlists
 
