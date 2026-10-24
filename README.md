@@ -18,8 +18,6 @@ Demonstrar, em ambiente estritamente isolado e controlado, a fragilidade de cred
 - IP do alvo (Windows11) na rede Host-Only: `192.168.56.103`
 - Serviço atacado: aplicação web Flask (porta `5000`), formulário de login (`POST /login`)
 
-*[Inserir aqui print ou diagrama simples mostrando as duas VMs no VirtualBox Manager]*
-
 ## 3. Aplicação alvo
 
 Aplicação Flask desenvolvida especificamente para o laboratório, com três versões incrementais:
@@ -58,8 +56,13 @@ O Hydra identificou a credencial correta:
 1 of 1 target successfully completed, 1 valid password found
 ```
 
-*[Inserir print do terminal do Kali com o resultado do Hydra]*
-*[Inserir print do log do Flask (PowerShell) mostrando as requisições POST /login recebidas durante o ataque]*
+<img width="1280" height="800" alt="ataque" src="https://github.com/user-attachments/assets/83449835-4581-4149-9fe0-21104abec2a2" />
+<img width="1280" height="800" alt="kali" src="https://github.com/user-attachments/assets/f1886bba-5fc8-42c1-a7fe-d5bc93b1a5dd" />
+<img width="1280" height="800" alt="kali2" src="https://github.com/user-attachments/assets/b1c784d5-fd87-4487-8158-4a8f9be43476" />
+
+<img width="1024" height="768" alt="seguranca" src="https://github.com/user-attachments/assets/a563e839-8da3-409d-8616-7d9d439fcb05" />
+<img width="1024" height="768" alt="seguranca2" src="https://github.com/user-attachments/assets/5081fd84-0850-4d8c-aefd-54d50ce7af0a" />
+<img width="1024" height="768" alt="seguranca3" src="https://github.com/user-attachments/assets/f97e2d35-a78f-4ea6-9090-9bea2c9f4051" />
 
 ### 4.4 Validação do acesso obtido
 
@@ -111,13 +114,13 @@ if senha_ok and otp_ok:
 
 Resultado: "Senha correta, mas código 2FA inválido" — acesso negado mesmo com a credencial correta.
 
-*[Inserir print dessa tela]*
+<img width="1501" height="1079" alt="image" src="https://github.com/user-attachments/assets/d98b47ca-1758-40d6-97d6-7f41f6deb87a" />
 
 **Teste manual com senha correta e código 2FA correto:**
 
 Resultado: "Login bem-sucedido!" — acesso concedido apenas com os dois fatores corretos.
 
-*[Inserir print dessa tela]*
+<img width="1024" height="768" alt="login com cod" src="https://github.com/user-attachments/assets/58f7f5da-1a5f-44bc-b7df-16554f1e681c" />
 
 **Novo ataque automatizado após a implementação do 2FA:**
 
@@ -127,7 +130,7 @@ hydra -l admin -P wordlist.txt -s 5000 192.168.56.103 http-post-form "/login:use
 
 Resultado: `0 valid password found`. Mesmo o Hydra conhecendo a senha correta, o ataque automatizado não é capaz de gerar o código TOTP necessário, sendo totalmente inviabilizado.
 
-*[Inserir print do terminal do Kali com esse resultado final]*
+<img width="1918" height="956" alt="image" src="https://github.com/user-attachments/assets/27ab02a4-0de6-4f64-a5e3-e317b68ac2f9" />
 
 ## 6. Conclusão
 
@@ -140,7 +143,7 @@ O laboratório demonstrou de forma prática que:
 
 ## 7. Vídeo demonstrativo
 
-Link (YouTube "Não listado" / Google Drive): `[inserir link aqui]`
+Link (YouTube "Não listado"): `[inserir link aqui]`
 
 ## 8. Scripts e wordlists
 
